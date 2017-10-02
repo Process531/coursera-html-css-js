@@ -28,12 +28,12 @@ multiply.version = 'v.1.0.0';
 
 // Function factory
 
-function makeMultiplier(multiplier) {
-    let myFunc = function (x) {
-        return multiplier * x;
-    };
-    return myFunc;
-}
+// function makeMultiplier(multiplier) {
+//     let myFunc = function (x) {
+//         return multiplier * x;
+//     };
+//     return myFunc;
+// }
 
 
 // console.log(makeMultiplier(3));
@@ -138,8 +138,46 @@ let literalCircle = {
     }
 }
 
-console.log(literalCircle.getArea());
 
+let names = ['Yaakov', 'Jonh', 'Joe'];
+let myObj = {
+    name: 'Yaakov',
+    course: 'HTML/CSS/JS',
+    platform: 'Cousera'
+}
+
+// names.greeting = 'Hi';
+
+// for(let prop in myObj) {
+//     console.log(prop + ': ' + myObj[prop]);
+// }
+
+// for(let name of names) {
+//     console.log('Hello ' + name);
+// }
+// console.log(names);
+
+// for(let name in names) {
+//     console.log('Hello ' + names[name]);
+// }
+
+// Closures
+
+function makeMultiplier(multiplier) {
+
+    function b() {
+        console.log('Multiplier is: ' + multiplier);
+    }
+    b();
+    return (
+        function (x) {
+            return multiplier * x;
+        }
+    );
+}
+
+let doubleAll = makeMultiplier(2);
+console.log(doubleAll(10));
 
 
 
