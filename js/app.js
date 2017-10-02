@@ -24,7 +24,7 @@ function multiply(x, y) {
 }
 
 multiply.version = 'v.1.0.0';
-console.log(multiply);
+
 
 // Function factory
 
@@ -46,10 +46,72 @@ function makeMultiplier(multiplier) {
 function doOperationOn(x, operation) {
     return operation(x);
 }
+
 // let result = doOperationOn(5, multiplyBy3);
 // console.log(result);
 // result = doOperationOn(100, doubleAll);
 // console.log(result);
+
+// let a = 7;
+// let b = a;
+// console.log('a: ' + a);
+// console.log('b: ' + b);
+//
+// b = 5;
+// console.log('after b update: ');
+// console.log('a: ' + a);
+// console.log('b: ' + b);
+//
+
+// let a = {x: 7};
+// let b = a;
+// console.log(a);
+// console.log(b);
+//
+// b.x = 5;
+// console.log('after b.x update;');
+// console.log(a);
+// console.log(b);
+
+// Pass by reference vs by value
+// function changePrimitive(primValue) {
+//     console.log('in chargePrimitive');
+//     console.log('before:');
+//     console.log(primValue);
+//
+//     primValue = 5;
+//     console.log('after:');
+//     console.log(primValue);
+// }
+//
+// let value = 7;
+// changePrimitive(value);
+// console.log('after changePrimitive, orig value:');
+// console.log(value);
+
+// function changeObject(objValue) {
+//     console.log('in changeObject...');
+//     console.log('before:');
+//     console.log(objValue);
+//
+//     objValue.x = 5;
+//     console.log('after:');
+//     console.log(objValue);
+// }
+
+// value = {x: 7};
+// changeObject(value);
+// console.log('after changeObject, orig value:');
+// console.log(value);
+// console.log(value);
+
+
+
+
+
+
+
+
 
 
 
