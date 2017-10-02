@@ -105,6 +105,42 @@ function doOperationOn(x, operation) {
 // console.log(value);
 // console.log(value);
 
+// Function constructor
+function Circle(radius) {
+    this.radius = radius;
+
+}
+
+Circle.prototype.getArea = function () {
+    return Math.PI * Math.pow(this.radius, 2);
+};
+
+// let myCircle = new Circle(10);
+// console.log(myCircle);
+//
+// let myOtherCircle = new Circle(20);
+// console.log(myOtherCircle);
+
+// Object literals and 'this'
+
+let literalCircle = {
+    radius: 10,
+    getArea: function () {
+        let self = this;
+        console.log(this);
+
+        let increaseRadius = function () {
+            self.radius = 20;
+        };
+        increaseRadius();
+        console.log(this.radius);
+        return Math.PI * Math.pow(this.radius, 2);
+    }
+}
+
+console.log(literalCircle.getArea());
+
+
 
 
 
