@@ -136,15 +136,13 @@ let literalCircle = {
         console.log(this.radius);
         return Math.PI * Math.pow(this.radius, 2);
     }
-}
+};
 
 
 let names = ['Yaakov', 'Jonh', 'Joe'];
 let myObj = {
-    name: 'Yaakov',
-    course: 'HTML/CSS/JS',
-    platform: 'Cousera'
-}
+    name: 'Obj'
+};
 
 // names.greeting = 'Hi';
 
@@ -163,21 +161,30 @@ let myObj = {
 
 // Closures
 
-function makeMultiplier(multiplier) {
+// function makeMultiplier(multiplier) {
+//
+//     function b() {
+//         console.log('Multiplier is: ' + multiplier);
+//     }
+//     b();
+//     return (
+//         function (x) {
+//             return multiplier * x;
+//         }
+//     );
+// }
+//
+// let doubleAll = makeMultiplier(2);
+// console.log(doubleAll(10));
 
-    function b() {
-        console.log('Multiplier is: ' + multiplier);
-    }
-    b();
-    return (
-        function (x) {
-            return multiplier * x;
-        }
-    );
-}
+// Immediately Invoked Function Expressions
 
-let doubleAll = makeMultiplier(2);
-console.log(doubleAll(10));
+((name) => {
+    console.log(name);
+    console.log('Hello ' + myObj.name)
+})();
+
+
 
 
 
