@@ -1,1 +1,9 @@
-King Kong
+{
+  "firstName": "King",
+  "lastName": "King",
+  "likesChineseFood": true,
+  "nubberOfDisplays": 2
+}
+
+
+
