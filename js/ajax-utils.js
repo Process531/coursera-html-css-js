@@ -23,4 +23,12 @@
         request.send(null);
     };
 
+    function  handleResponse(request, responseHandler) {
+        if((request.readyState === 4) && (request.status === 200)) {
+            responseHandler(request);
+        }
+    }
+    global.$ajaxUtils = ajaxUtils;
+
 })(window);
+

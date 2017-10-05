@@ -5,7 +5,6 @@
 document.addEventListener('DOMContentLoaded',
     function (event) {
 
-
         function sayHello(event) {
             let name = document.getElementById('name').value;
             let message = `<h2>Hello ${name}</h2>`;
