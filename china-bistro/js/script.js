@@ -73,6 +73,27 @@ $(function () {
             false);
     }
 
+    // Using categories data and snippets html
+    // build caregories view HTML to be inserted into page
+    function buildCategoriesViewHtml(categories,
+                                     categoriesTitleHtml,
+                                     categoryHtml) {
+
+        let finalHtml = categoriesTitleHtml;
+        finalHtml += "<section class='row'>";
+
+        // Loop over categories
+        for (let i = 0; i < categories.length; i++) {
+            let html = categoryHtml;
+            let name = "" + categories[i].name;
+            let short_name = "" + categories[i].short_name;
+            html = insertProperty(html, "name", name);
+            html = insertProperty(html, "short_name", short_name);
+            finalHtml += html;
+        }
+
+    }
+
 
     global.$dc = dc;
 
